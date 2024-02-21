@@ -4,13 +4,13 @@ import "time"
 
 // History struct
 type History struct {
-	ID     int       `json:"id"`
-	Symbol string    `json:"symbol"`
-	Time   time.Time `json:"time"`
-	Open   float64   `json:"open"`
-	Hight  float64   `json:"hight"`
-	Low    float64   `json:"low"`
-	Close  float64   `json:"close"`
+	ID     int     `json:"id"`
+	Symbol string  `json:"symbol"`
+	Time   int64   `json:"time"`
+	Open   float64 `json:"open"`
+	Hight  float64 `json:"hight"`
+	Low    float64 `json:"low"`
+	Close  float64 `json:"close"`
 }
 
 type GetHistoriesRequest struct {
@@ -21,10 +21,10 @@ type GetHistoriesRequest struct {
 }
 
 type GetHistoriesResponse struct {
-	High   float64   `json:"high"`
-	Low    float64   `json:"low"`
-	Open   float64   `json:"open"`
-	Close  float64   `json:"close"`
-	Time   time.Time `json:"time"`
-	Change float64   `json:"change"`
+	High   float64 `json:"high"`
+	Low    float64 `json:"low"`
+	Open   float64 `json:"open"`
+	Close  float64 `json:"close"`
+	Time   int64   `json:"time"`
+	Change float64 `json:"change"`
 }
