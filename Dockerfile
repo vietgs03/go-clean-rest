@@ -1,13 +1,13 @@
-FROM golang:1.16-alpine
+FROM golang:1.17-alpine
 
 RUN apk add --no-cache git
-RUN go get -u -d github.com/golang-migrate/migrate/cmd/migrate
 
 WORKDIR /app
 
 COPY go.mod go.sum ./
 
 RUN go mod download
+RUN go mod tidy
 
 COPY . .
 

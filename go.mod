@@ -1,6 +1,6 @@
 module go-test
 
-go 1.21.6
+go 1.17
 
 require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
